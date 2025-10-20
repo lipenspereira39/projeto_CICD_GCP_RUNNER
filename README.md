@@ -57,4 +57,4 @@ A página está online e acessível via IP público da VM, demonstrando o funcio
 ---
 
 Para dúvidas, sugestões ou melhorias, fique à vontade para abrir uma issue ou contribuir com pull requests.
-![Cafe Klang](
+![Cafe Klang](https://github.com/lipenspereira39/projeto_CICD_GCP_RUNNER/blob/main/Cafe%20Klang.png)
