@@ -1,0 +1,23 @@
+stages:
+  - build
+  - deploy 
+
+criar_imagens:
+    stage: build
+    tags: 
+      - gcp
+    script:
+         - docker build -f app/Dockerfile -t lipenspereira8439/gcp-projeto2:1.0 app/
+         - docker push lipenspereira8439/gcp-projeto2:1.0
+
+executar_imagens:
+    stage: deploy 
+    needs:
+      - criar_imagens
+    tags:
+      - gcp
+    script:
+      - docker rm -f webserver || true
+      - docker run -dti --name webserver -p 80:80 lipenspereira8439/gcp-projeto2:1.0
+
+
